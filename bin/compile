@@ -43,6 +43,7 @@ function run_npm() {
   command="$1"
 
   echo "$VENDORED_NODE/bin/node $VENDORED_NPM/cli.js" > $VENDORED_NPM/npm
+  chmod +x $VENDORED_NPM/npm
   PATH="$PATH:$VENDORED_NPM"
 
   cd $BUILD_DIR
